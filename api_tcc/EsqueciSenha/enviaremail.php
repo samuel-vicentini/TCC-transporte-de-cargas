@@ -29,17 +29,17 @@ if($count != 1){
     require 'src/SMTP.php';
 
     $mail = new PHPMailer;
-
+    // informações foram retiradas por segurança!
     $mail->isSMTP();                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;               // Enable SMTP authentication
-    $mail->Username = 'transportesprojetotcc@gmail.com';   // SMTP username
-    $mail->Password = 'valqemqxjgbscrev';   // SMTP password
+    $mail->Username = '';   // SMTP username
+    $mail->Password = '';   // SMTP password
     $mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                    // TCP port to connect to
+    $mail->Port = '';                    // TCP port to connect to
 
     // Sender info
-    $mail->setFrom(address:'transportesprojetotcc@gmail.com', name: 'Transporte de Cargas');
+    $mail->setFrom(address:'', name: '');
 
     // pessoa que vai receber o código:
     $mail->addAddress($Email);
